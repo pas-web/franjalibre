@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>¿Qué es la Franja Libre? · Campus Concá UAQ</title>
+<meta name="description" content="Qué es la Franja Libre del Campus Concá, qué buscaba, por qué importa y cómo puede adaptarla un campus pequeño como Jalpan, Pinal de Amoles o Cadereyta.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,400&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+:root {
+  --vp:#1A3A2A; --vs:#2D5A3D; --vv:#4A8C5C; --vc:#7AB88A;
+  --oc:#E8A85A; --cr:#F5EED8; --cs:#F7F4E4;
+  --oc-l:#FBF1E2; --oc-t:#B05020; --wa:#25D366;
+}
+body { font-family:'Instrument Sans',sans-serif; background:var(--cs); color:var(--vp); }
+
+/* HERO */
+.hero { text-align:center; padding:40px 20px 12px; }
+.hero-volver { display:inline-block; font-size:13.5px; font-weight:600; color:var(--vs); text-decoration:none; margin-bottom:22px; }
+.hero-volver:hover { color:var(--vv); }
+.hero-flag {
+  display:inline-block; background:var(--oc); color:#3A2A10; border-radius:20px;
+  padding:5px 15px; font-size:11.5px; font-weight:600; letter-spacing:.09em; text-transform:uppercase;
+  margin-bottom:14px;
+}
+.hero h1 {
+  font-family:'Fraunces',serif; font-size:clamp(32px, 6vw, 52px); font-weight:900;
+  line-height:1.08; max-width:16ch; margin:0 auto 10px;
+}
+.hero h1 em { color:var(--vv); font-style:italic; }
+.hero-tagline { font-family:'Fraunces',serif; font-style:italic; font-size:20px; color:var(--vs); margin:10px 0 18px; }
+.hero-pill {
+  display:inline-flex; align-items:center; gap:10px; flex-wrap:wrap; justify-content:center;
+  background:var(--vp); color:#fff; border-radius:40px;
+  padding:10px 24px; font-size:14px; font-weight:600; letter-spacing:.02em;
+}
+.hero-pill span { color:var(--oc); }
+
+.wrap { max-width:1100px; margin:0 auto; padding:0 20px; }
+
+/* PROSA */
+.prosa { max-width:68ch; margin:36px auto 0; font-size:16.5px; line-height:1.7; color:#3d4a42; }
+.prosa p + p { margin-top:16px; }
+.prosa strong { color:var(--vp); }
+.prosa .lead { font-family:'Fraunces',serif; font-size:22px; line-height:1.45; color:var(--vp); font-weight:400; }
+
+/* BLOQUE VERDE */
+.dinamica {
+  background:linear-gradient(135deg, var(--vp), var(--vs));
+  border-radius:16px; padding:30px 28px; margin:40px 0 8px; color:#fff;
+  position:relative; overflow:hidden;
+}
+.dinamica::before {
+  content:''; position:absolute; top:-40px; right:-30px; width:190px; height:190px;
+  border-radius:50%; background:radial-gradient(circle, rgba(232,168,90,.28), transparent 70%);
+}
+.dinamica h2 { font-family:'Fraunces',serif; font-size:24px; font-weight:900; margin-bottom:16px; position:relative; }
+.dinamica-pasos { display:grid; grid-template-columns:repeat(auto-fit, minmax(230px,1fr)); gap:18px; position:relative; }
+.paso { font-size:14px; line-height:1.65; color:rgba(245,238,216,.9); }
+.paso b { display:block; color:#fff; font-size:15px; margin-bottom:4px; }
+.paso .p-emoji { font-size:26px; display:block; margin-bottom:8px; }
+
+/* SECCIÓN TÍTULO */
+.sec-titulo { font-family:'Fraunces',serif; font-size:34px; font-weight:900; color:var(--vp); text-align:center; margin:48px 0 8px; }
+.sec-titulo em { color:var(--vv); font-style:italic; }
+.sec-sub { text-align:center; color:#777; font-size:15px; margin-bottom:28px; max-width:60ch; margin-left:auto; margin-right:auto; }
+
+/* FICHAS */
+.fichas { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px,1fr)); gap:18px; margin-bottom:8px; }
+.ficha {
+  background:#fff; border-radius:14px; padding:22px 22px 20px;
+  border:1px solid rgba(26,58,42,.08); border-top:4px solid var(--oc);
+}
+.ficha-emoji { font-size:36px; line-height:1; margin-bottom:10px; }
+.ficha h3 { font-family:'Fraunces',serif; font-size:21px; font-weight:700; margin-bottom:8px; }
+.ficha p { font-size:14px; color:#555; line-height:1.6; }
+
+/* ADAPTAR */
+.adaptar { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-bottom:8px; }
+.col {
+  background:#fff; border-radius:14px; padding:24px 24px 20px;
+  border:1px solid rgba(26,58,42,.08);
+}
+.col.esencial { border-top:4px solid var(--vv); }
+.col.local { border-top:4px solid var(--oc); }
+.col h3 { font-family:'Fraunces',serif; font-size:22px; font-weight:700; margin-bottom:6px; }
+.col .col-sub { font-size:13px; color:#999; font-style:italic; margin-bottom:14px; }
+.col p { font-size:14.5px; color:#555; line-height:1.65; }
+.col p + p { margin-top:10px; }
+.col p b { color:var(--vp); }
+
+/* PASOS DE ARRANQUE */
+.arranque { counter-reset:paso; display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:14px; margin-bottom:8px; }
+.arranque div {
+  background:var(--oc-l); border-radius:12px; padding:18px 18px 16px;
+  font-size:14px; color:#5a4630; line-height:1.55; position:relative;
+}
+.arranque div::before {
+  counter-increment:paso; content:counter(paso);
+  display:block; font-family:'Fraunces',serif; font-size:30px; font-weight:900; color:var(--oc-t); margin-bottom:6px;
+}
+.arranque b { color:#3A2A10; display:block; margin-bottom:3px; }
+
+/* NOTA FINAL */
+.nota {
+  background:#fff; border-radius:14px; border:1px solid rgba(26,58,42,.08);
+  padding:22px 26px; margin:36px 0 48px; font-size:15px; color:#555; line-height:1.65;
+  text-align:center;
+}
+.nota b { color:var(--vp); }
+.nota a { color:var(--vv); font-weight:600; }
+
+/* PIE */
+footer { background:var(--vp); color:var(--vc); text-align:center; padding:28px 20px; font-size:13px; letter-spacing:.04em; }
+footer strong { color:var(--oc); }
+footer a { color:var(--vc); }
+
+@media (max-width:700px) {
+  .sec-titulo { font-size:26px; }
+  .hero-tagline { font-size:17px; }
+  .dinamica { padding:26px 22px; }
+  .adaptar { grid-template-columns:1fr; }
+  .prosa { font-size:16px; }
+  .prosa .lead { font-size:20px; }
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div><a class="hero-volver" href="index.html">← Franja Libre</a></div>
+  <span class="hero-flag">📖 El modelo</span>
+  <h1>¿Qué es la <em>Franja Libre</em>?</h1>
+  <div class="hero-tagline">hora y media en la que nadie tiene clase</div>
+  <div class="hero-pill"><span>Martes y jueves</span> · 11:30 – 13:00 h · Campus Concá</div>
+</header>
+
+<div class="wrap">
+
+  <div class="prosa">
+    <p class="lead">En el Campus Concá conviven la prepa y dos licenciaturas, y hasta hace poco cada grupo tenía sus horas libres a distinta hora. Nadie coincidía con nadie.</p>
+    <p>La Franja Libre salió de ahí. Antes de pensar en talleres, las coordinaciones movieron los horarios de todos los grupos para que quedara un mismo hueco libre, martes y jueves de 11:30 a 13:00. Ese acomodo fue el trabajo difícil y es lo que sostiene todo lo demás.</p>
+    <p>Con el hueco abierto se llenó de actividades. Hay talleres permanentes que sesionan cada semana durante el semestre, un torneo de fútbol en la media hora previa y, unas cuantas veces al semestre, eventos que suspenden los talleres y juntan al campus completo, como la Feria de Intercambio de Saberes, el Mercadito Sustentable, el Día del Maíz y el Día de Muertos. Los talleres los dan maestros y estudiantes del propio campus.</p>
+  </div>
+
+  <div class="dinamica">
+    <h2>Qué se buscaba</h2>
+    <div class="dinamica-pasos">
+      <div class="paso">
+        <span class="p-emoji">🤝</span>
+        <b>Que los programas se mezclen</b>
+        Que estudiantes de prepa y de licenciatura, maestros y administrativos compartan taller, equipo o mesa. Fuera de la franja eso casi no pasa, porque cada quien está en clase a distinta hora.
+      </div>
+      <div class="paso">
+        <span class="p-emoji">🌞</span>
+        <b>Un horario que no pelee con el camión</b>
+        Muchos estudiantes se van en el transporte de las 15:00 y en la tarde hace demasiado calor. Por eso la franja quedó en la mañana, dentro del horario de clases, y no después.
+      </div>
+      <div class="paso">
+        <span class="p-emoji">🏡</span>
+        <b>No suspender clases</b>
+        Desde Querétaro llegan obras de teatro, talleres, reuniones y seminarios que se programan en horario de clase y obligan a suspenderlas. Con la franja hay un hueco donde acomodarlos sin que ningún grupo pierda su materia.
+      </div>
+      <div class="paso">
+        <span class="p-emoji">🎓</span>
+        <b>Talleristas de casa</b>
+        Los talleres los dan maestros y estudiantes del campus. A los maestros la Escuela de Bachilleres les paga como talleristas; los estudiantes que enseñan reciben reconocimiento por hacerlo.
+      </div>
+    </div>
+  </div>
+
+  <h2 class="sec-titulo">Por qué <em>importa</em></h2>
+  <p class="sec-sub">Lo que se le puede decir a una coordinación o a un comité que pregunte para qué sirve.</p>
+
+  <div class="prosa" style="margin-top:0;">
+    <p>Un campus chico nunca va a tener la oferta cultural y deportiva de la sede central. Lo que sí puede tener es a toda su gente libre a la misma hora, y eso no cuesta dinero, solo cuesta mover horarios. Cuando existe ese hueco común, el campus deja de ser un lugar por donde la gente pasa entre clase y clase.</p>
+    <p>También se arregla un problema viejo. Antes, cualquier actividad extra caía encima de alguna clase y acababa yendo un solo grupo. Ahora ningún taller le quita tiempo a nadie, y las celebraciones del semestre ya tienen dónde caber sin andar negociando con cada maestro.</p>
+    <p>Y queda registro. Como la inscripción y el pase de lista son en línea, al terminar el semestre se sabe quién fue a qué y cuántas veces. Con eso se acreditan puntos extra y créditos, se justifica el pago a los talleristas y se puede mostrar con números lo que pasó, si alguien de la institución lo pide.</p>
+  </div>
+
+  <h2 class="sec-titulo">Cómo funciona <em>por dentro</em></h2>
+  <p class="sec-sub">Lo que hay detrás para que cada semana salga sin mucho esfuerzo.</p>
+
+  <div class="fichas">
+    <div class="ficha">
+      <div class="ficha-emoji">📅</div>
+      <h3>Una franja fija</h3>
+      <p>Dos días a la semana, hora y media, todo el semestre. Los horarios de todos los programas se acomodan para dejar ese hueco. Si el hueco no existe, lo demás no se sostiene.</p>
+    </div>
+    <div class="ficha">
+      <div class="ficha-emoji">🧩</div>
+      <h3>Talleres permanentes</h3>
+      <p>Cada taller sesiona todas las semanas del semestre, con cupo de 20 y un tallerista a cargo. En Concá hay catorce este semestre, entre deporte, pintura, inglés, escritura, guitarra y huapango.</p>
+    </div>
+    <div class="ficha">
+      <div class="ficha-emoji">🎪</div>
+      <h3>Eventos que suspenden la franja</h3>
+      <p>Unas cuantas fechas al semestre los talleres se detienen y se junta el campus entero. En Concá son una feria donde la gente se enseña entre sí, un mercadito de trueque, el Día del Maíz, el Día de Muertos y un cierre.</p>
+    </div>
+    <div class="ficha">
+      <div class="ficha-emoji">📝</div>
+      <h3>Inscripción en línea</h3>
+      <p>Una página como esta, con un formulario de tres campos (nombre, quién eres, WhatsApp) que guarda en una hoja de cálculo. El enlace se manda por WhatsApp y la gente se inscribe desde el celular.</p>
+    </div>
+    <div class="ficha">
+      <div class="ficha-emoji">✅</div>
+      <h3>Asistencia con app propia</h3>
+      <p>Cada tallerista pasa lista desde su teléfono con una aplicación hecha para la franja. Trae ya cargados a los inscritos, se marca con un toque y se guarda en la misma hoja de cálculo.</p>
+    </div>
+    <div class="ficha">
+      <div class="ficha-emoji">📊</div>
+      <h3>Tablero de coordinación</h3>
+      <p>Con la asistencia guardada, un tablero muestra cada semana qué talleres se están vaciando, quién dejó de ir y cuántas sesiones lleva cada estudiante, que es lo que se usa para acreditar puntos extra y créditos.</p>
+    </div>
+  </div>
+
+  <h2 class="sec-titulo">Para adaptarla en <em>tu campus</em></h2>
+  <p class="sec-sub">Jalpan, Pinal de Amoles, Cadereyta o cualquier campus donde los programas comparten pasillo pero no horario. Vale la pena distinguir qué parte es el modelo y qué parte fue cosa de Concá.</p>
+
+  <div class="adaptar">
+    <div class="col esencial">
+      <h3>Lo esencial</h3>
+      <div class="col-sub">sin esto no funciona</div>
+      <p><b>El hueco común.</b> Un mismo espacio libre en el horario de todos los programas, y que nadie lo ocupe después con una clase.</p>
+      <p><b>Talleristas del campus.</b> Maestros y estudiantes que enseñan algo que ya saben hacer. Así sale barato y la gente le toma cariño.</p>
+      <p><b>Un registro que no canse.</b> Inscripción y asistencia sencillas, que al final del semestre dejen datos.</p>
+      <p><b>Un comité chico.</b> Tres o cuatro personas de las distintas coordinaciones que se vean media hora de vez en cuando para repartir fechas y responsables.</p>
+    </div>
+    <div class="col local">
+      <h3>Lo que fue circunstancia</h3>
+      <div class="col-sub">se puede cambiar</div>
+      <p><b>Martes y jueves a las 11:30.</b> Salió de los horarios y del transporte de Concá. En otro campus la hora posible será otra.</p>
+      <p><b>Los talleres.</b> Hay huapango, calistenia, ajedrez o inglés porque alguien del campus sabía enseñarlos. Primero se pregunta quién sabe qué y de ahí sale la lista.</p>
+      <p><b>Las celebraciones.</b> El Día del Maíz o la Feria de Saberes tienen sentido en la Sierra Gorda. Cada campus tiene ya sus fechas que juntan a la gente.</p>
+      <p><b>Las herramientas.</b> La página, los formularios, la app de asistencia y el tablero se pueden reusar tal cual, aunque para empezar alcanza con una hoja de cálculo y un grupo de WhatsApp.</p>
+    </div>
+  </div>
+
+  <h2 class="sec-titulo">Cómo <em>arrancar</em></h2>
+  <p class="sec-sub">El orden en que se hizo en Concá.</p>
+
+  <div class="arranque">
+    <div><b>Abrir el hueco</b>Acordar con las coordinaciones de cada programa el mismo espacio libre en el horario, antes de planear cualquier otra cosa.</div>
+    <div><b>Preguntar quién sabe qué</b>Preguntar entre maestros y estudiantes qué pueden enseñar. De ahí sale la lista de talleres, con un tallerista y un salón o cancha para cada uno.</div>
+    <div><b>Ver lo del pago</b>Gestionar el pago de los maestros talleristas con quien corresponda en cada campus y acordar qué reconocimiento se les da a los estudiantes que dan taller.</div>
+    <div><b>Publicar e inscribir</b>Una página o un formulario, mandado por WhatsApp, con cupo por taller. Con un par de días de inscripciones alcanza.</div>
+    <div><b>Pasar lista y revisar</b>Registrar la asistencia desde la primera sesión y verla cada semana, para darse cuenta a tiempo si un taller se está vaciando.</div>
+  </div>
+
+  <p class="nota">Si en tu campus quieren armar su propia franja, <b>las páginas, los formularios y la app de asistencia de Concá se pueden compartir</b> para no empezar desde cero. Basta con escribir a la coordinación del Campus Concá.</p>
+
+</div>
+
+<footer>
+  <strong>Franja Libre</strong> · Campus Concá · Sierra Gorda · UAQ · Semestre 2026-2
+</footer>
+
+</body>
+</html>
