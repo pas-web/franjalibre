@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Torneo de básquetbol mixto · Franja Libre · Campus Concá UAQ</title>
-<meta name="description" content="Registro al torneo de básquetbol mixto de la Franja Libre, Campus Concá UAQ. Martes y jueves de 11:00 a 11:30, equipos de siete —cuatro hombres y tres mujeres— con cinco en cancha y dos relevos.">
+<meta name="description" content="Registro al torneo de básquetbol mixto de la Franja Libre, Campus Concá UAQ. Jueves de 11:00 a 12:00, equipos de siete —cuatro hombres y tres mujeres— con cinco en cancha y dos relevos.">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,400&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
@@ -165,14 +165,14 @@ footer a { color:var(--vc); }
   <a class="volver" href="index.html">← Franja Libre</a>
   <span class="hero-eyebrow">Franja Libre · Semestre 2026-2 · Campus Concá</span>
   <h1>Torneo de básquetbol <em>mixto</em></h1>
-  <p>Los partidos se juegan de 11:00 a 11:30, martes o jueves, con equipos de siete: cuatro hombres y tres mujeres. Cinco están en cancha —siempre con al menos dos mujeres— y las dos personas que quedan fuera entran en los cambios. Pueden jugar estudiantes de los tres programas, docentes y administrativos, mezclados como quieran. El calendario y el sistema de competencia se arman al cerrar el registro, con los equipos que hayan quedado.</p>
+  <p>Los partidos se juegan los jueves de 11:00 a 12:00, con equipos de siete: cuatro hombres y tres mujeres. Cinco están en cancha —siempre con al menos dos mujeres— y las dos personas que quedan fuera entran en los cambios. Pueden jugar estudiantes de los tres programas, docentes y administrativos, mezclados como quieran. El calendario y el sistema de competencia se arman al cerrar el registro, con los equipos que hayan quedado.</p>
   <span class="rapido">🏀 Registrar un equipo toma tres minutos</span>
 </header>
 
 <div class="wrap">
 
   <dl class="ficha">
-    <div><dt>Cuándo</dt><dd>Martes y jueves<small>11:00 a 11:30 h</small></dd></div>
+    <div><dt>Cuándo</dt><dd>Jueves<small>11:00 a 12:00 h</small></dd></div>
     <div><dt>Equipos</dt><dd>Siete personas<small>4 hombres y 3 mujeres</small></dd></div>
     <div><dt>En cancha</dt><dd>Cinco por lado<small>Dos personas de relevo</small></dd></div>
     <div><dt>Quién puede</dt><dd>Toda la comunidad<small>Estudiantes, docentes y administrativos</small></dd></div>
@@ -280,15 +280,8 @@ footer a { color:var(--vc); }
 
     <!-- PASO 3 -->
     <section class="paso" id="paso-3" hidden>
-      <h2>Disponibilidad y compromiso</h2>
-      <p class="intro">Con esta información se arma el calendario. Entre más abierta sea la disponibilidad, más fácil resulta acomodar a todos en la misma franja de treinta minutos.</p>
-
-      <fieldset>
-        <legend>¿Qué días puede jugar el equipo?</legend>
-        <label class="opcion dia-mar"><input type="checkbox" class="dia" value="Martes"><span>Martes, 11:00 a 11:30<small>La mayoría de los talleres de la Franja Libre corren en paralelo</small></span></label>
-        <label class="opcion dia-jue"><input type="checkbox" class="dia" value="Jueves"><span>Jueves, 11:00 a 11:30<small>Algunas fechas se suspenden por eventos especiales del campus</small></span></label>
-      </fieldset>
-      <div class="alerta amb" id="alerta-dia" hidden>Con un solo día disponible el equipo entra al calendario, pero le tocan menos partidos y con menos margen para reprogramar. Si pueden los dos, márquenlos.</div>
+      <h2>El compromiso</h2>
+      <p class="intro">Los partidos se juegan los jueves de 11:00 a 12:00. Revisa que el registro esté completo y acepta las condiciones del torneo; el calendario se arma al cerrar el registro con los equipos inscritos.</p>
 
       <div class="resumen" id="resumen"></div>
 
@@ -328,13 +321,7 @@ footer a { color:var(--vc); }
         <p class="hint">Por aquí te avisan qué partidos te tocan.</p>
       </div>
 
-      <fieldset>
-        <legend>¿Qué días puedes apoyar?</legend>
-        <label class="opcion dia-mar"><input type="checkbox" class="arb-dia" value="Martes"><span>Martes, 11:00 a 11:30</span></label>
-        <label class="opcion dia-jue"><input type="checkbox" class="arb-dia" value="Jueves"><span>Jueves, 11:00 a 11:30</span></label>
-      </fieldset>
-
-      <div class="alerta verde">Arbitrar no te impide jugar: si estás en un equipo, se procura que no te toque pitar los partidos en que participas.</div>
+      <div class="alerta verde">Los partidos son los jueves de 11:00 a 12:00. Arbitrar no te impide jugar: si estás en un equipo, se procura que no te toque arbitrar los partidos en que participas.</div>
 
       <div class="acciones">
         <button class="btn btn-sec" onclick="volverInicio()">Atrás</button>
@@ -371,7 +358,7 @@ footer a { color:var(--vc); }
 
 <footer>
   <strong>Franja Libre · Campus Concá · UAQ</strong><br>
-  Semestre 2026-2 · Martes y jueves de 11:00 a 11:30<br>
+  Semestre 2026-2 · Jueves de 11:00 a 12:00<br>
   <a href="index.html">Volver a la Franja Libre</a>
 </footer>
 
@@ -392,7 +379,7 @@ document.querySelectorAll('select.adsc').forEach(function (s) {
 
 var IDS_H = ['h1','h2','h3','h4'], IDS_HA = ['ha1','ha2','ha3','ha4'];
 var IDS_F = ['f1','f2','f3'], IDS_FA = ['fa1','fa2','fa3'];
-var nombres = ['El equipo','La plantilla','Disponibilidad y compromiso'];
+var nombres = ['El equipo','La plantilla','El compromiso'];
 var modo = '';
 
 // ===== NAVEGACIÓN GENERAL =====
@@ -471,10 +458,6 @@ function repetidos() {
   });
   return repes;
 }
-function marcados(clase) {
-  return Array.prototype.slice.call(document.querySelectorAll('.'+clase+':checked'))
-    .map(function(c){ return c.value; });
-}
 function escapar(t) {
   return String(t).replace(/[&<>]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c]; });
 }
@@ -499,12 +482,6 @@ function pintarMezcla() {
 }
 
 // ===== AVISOS EN VIVO =====
-document.querySelectorAll('.dia').forEach(function(c){
-  c.addEventListener('change', function(){
-    document.getElementById('alerta-dia').hidden = (marcados('dia').length !== 1);
-    armarResumen();
-  });
-});
 document.getElementById('paso-3').addEventListener('change', armarResumen);
 document.getElementById('paso-3').addEventListener('input', armarResumen);
 
@@ -515,10 +492,10 @@ function datosEquipo() {
     tipo: 'torneo',
     equipo: val('equipo'), color: val('color'),
     capitan: val('capitan'), telefono: val('tel'),
-    dias: marcados('dia').join('; '),
+    dias: 'Jueves',
     integrantes: p,
     plantilla: p.map(function(x){ return x.nombre + ' (' + x.genero.charAt(0) + ' · ' + x.adscripcion + ')'; }).join('\n'),
-    horario: '11:00 a 11:30 h',
+    horario: '11:00 a 12:00 h',
     enviada: new Date().toLocaleString('es-MX')
   };
 }
@@ -528,8 +505,8 @@ function datosArbitro() {
     nombre: val('arb-nombre'),
     adscripcion: val('arb-adsc'),
     telefono: val('arb-tel'),
-    dias: marcados('arb-dia').join('; '),
-    horario: '11:00 a 11:30 h',
+    dias: 'Jueves',
+    horario: '11:00 a 12:00 h',
     enviada: new Date().toLocaleString('es-MX')
   };
 }
@@ -542,7 +519,7 @@ function armarResumen() {
     ['Capitanea', d.capitan],
     ['WhatsApp', d.telefono],
     ['Plantilla', d.plantilla],
-    ['Días', d.dias || 'Sin elegir'],
+    ['Día', d.dias],
     ['Horario', d.horario]
   ];
   document.getElementById('resumen').innerHTML =
@@ -579,7 +556,6 @@ function mandar(datos, boton, textoBoton, alExito) {
 }
 
 function enviarEquipo() {
-  if (marcados('dia').length === 0) return alert('Elige al menos un día en que el equipo pueda jugar.');
   if (!document.getElementById('compromiso').checked) return alert('Falta aceptar las condiciones del torneo.');
   mandar(datosEquipo(), 'btn-enviar', 'Registrar equipo', function(){
     ocultarTodo();
@@ -594,7 +570,6 @@ function enviarArbitro() {
   if (!val('arb-nombre')) return alert('Falta tu nombre.');
   if (!val('arb-adsc')) return alert('Elige tu programa o área.');
   if (!val('arb-tel')) return alert('Falta tu teléfono de WhatsApp.');
-  if (marcados('arb-dia').length === 0) return alert('Elige al menos un día en que puedas apoyar.');
   mandar(datosArbitro(), 'btn-arbitro', 'Anotarme', function(){
     ocultarTodo();
     document.getElementById('exito-arbitro').hidden = false;
