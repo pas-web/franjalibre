@@ -1,7 +1,7 @@
 /**
- * TORNEO DE FÚTBOL MIXTO · FRANJA LIBRE · CAMPUS CONCÁ UAQ
- * Recibe los registros de torneo.html y los guarda en la hoja de cálculo.
- * Atiende dos tipos de envío: equipos (cuatro hombres y dos mujeres) y árbitros.
+ * TORNEO DE BÁSQUETBOL MIXTO · FRANJA LIBRE · CAMPUS CONCÁ UAQ
+ * Recibe los registros de basquetbol.html y los guarda en la hoja de cálculo.
+ * Atiende dos tipos de envío: equipos (cinco hombres y dos mujeres) y árbitros.
  *
  * CÓMO INSTALARLO
  *  1. Abre la hoja de cálculo del torneo en Drive.
@@ -11,13 +11,13 @@
  *  4. Ejecuta una vez la función preparar() para crear las pestañas y encabezados.
  *  5. Implementar → Nueva implementación → Aplicación web.
  *       Ejecutar como: Yo.   Quién tiene acceso: Cualquier usuario.
- *  6. Copia la URL que termina en /exec y pégala en la constante SCRIPT_URL de torneo.html.
+ *  6. Copia la URL que termina en /exec y pégala en la constante SCRIPT_URL de basquetbol.html.
  *
  * Si más adelante cambias el código, hay que crear una NUEVA implementación
  * (o actualizar la versión) para que la URL /exec sirva el código nuevo.
  */
 
-var CORREO_ORGANIZA = 'eduardo.lusan@gmail.com';   // ← avisos por registro nuevo; '' para desactivarlos
+var CORREO_ORGANIZA = 'dulce.morales@uaq.mx';   // ← avisos por registro nuevo; '' para desactivarlos
 var HOJA_EQUIPOS = 'Equipos';
 var HOJA_INTEGRANTES = 'Integrantes';
 var HOJA_ARBITROS = 'Árbitros';
@@ -81,7 +81,7 @@ function doPost(e) {
 /** Prueba rápida en el navegador: la URL /exec debe responder este texto. */
 function doGet() {
   return ContentService
-    .createTextOutput('Torneo Franja Libre · registro listo (equipos y árbitros)')
+    .createTextOutput('Torneo de básquetbol Franja Libre · registro listo (equipos y árbitros)')
     .setMimeType(ContentService.MimeType.TEXT);
 }
 
@@ -140,7 +140,7 @@ function avisarEquipo(d, gente) {
   }).join('\n');
 
   var cuerpo =
-    'Nuevo equipo en el torneo de fútbol mixto de la Franja Libre.\n\n' +
+    'Nuevo equipo en el torneo de básquetbol mixto de la Franja Libre.\n\n' +
     'EQUIPO: ' + (d.equipo || '') + '\n' +
     'Color: ' + (d.color || '—') + '\n' +
     'Capitanea: ' + (d.capitan || '') + '\n' +
@@ -151,7 +151,7 @@ function avisarEquipo(d, gente) {
 
   MailApp.sendEmail({
     to: CORREO_ORGANIZA,
-    subject: 'Torneo Franja Libre · nuevo equipo: ' + (d.equipo || 'sin nombre'),
+    subject: 'Torneo de básquetbol Franja Libre · nuevo equipo: ' + (d.equipo || 'sin nombre'),
     body: cuerpo
   });
 }
@@ -169,9 +169,9 @@ function guardarArbitro(d) {
   if (CORREO_ORGANIZA) {
     MailApp.sendEmail({
       to: CORREO_ORGANIZA,
-      subject: 'Torneo Franja Libre · nueva persona para arbitrar: ' + (d.nombre || 'sin nombre'),
+      subject: 'Torneo de básquetbol Franja Libre · nueva persona para arbitrar: ' + (d.nombre || 'sin nombre'),
       body:
-        'Alguien se anotó para arbitrar en el torneo de fútbol de la Franja Libre.\n\n' +
+        'Alguien se anotó para arbitrar en el torneo de básquetbol de la Franja Libre.\n\n' +
         'Nombre: ' + (d.nombre || '') + '\n' +
         'Adscripción: ' + (d.adscripcion || '') + '\n' +
         'WhatsApp: ' + (d.telefono || '') + '\n' +
