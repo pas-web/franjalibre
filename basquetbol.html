@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Torneo de básquetbol mixto · Franja Libre · Campus Concá UAQ</title>
-<meta name="description" content="Registro al torneo de básquetbol mixto de la Franja Libre, Campus Concá UAQ. Martes y jueves de 11:00 a 11:30, equipos de siete —cinco hombres y dos mujeres— con cinco en cancha y dos relevos.">
+<meta name="description" content="Registro al torneo de básquetbol mixto de la Franja Libre, Campus Concá UAQ. Martes y jueves de 11:00 a 11:30, equipos de siete —cuatro hombres y tres mujeres— con cinco en cancha y dos relevos.">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,400&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
@@ -165,7 +165,7 @@ footer a { color:var(--vc); }
   <a class="volver" href="index.html">← Franja Libre</a>
   <span class="hero-eyebrow">Franja Libre · Semestre 2026-2 · Campus Concá</span>
   <h1>Torneo de básquetbol <em>mixto</em></h1>
-  <p>Los partidos se juegan de 11:00 a 11:30, martes o jueves, con equipos de siete: cinco hombres y dos mujeres. Cinco están en cancha y las dos personas que quedan fuera entran en los cambios. Pueden jugar estudiantes de los tres programas, docentes y administrativos, mezclados como quieran. El calendario y el sistema de competencia se arman al cerrar el registro, con los equipos que hayan quedado.</p>
+  <p>Los partidos se juegan de 11:00 a 11:30, martes o jueves, con equipos de siete: cuatro hombres y tres mujeres. Cinco están en cancha —siempre con al menos dos mujeres— y las dos personas que quedan fuera entran en los cambios. Pueden jugar estudiantes de los tres programas, docentes y administrativos, mezclados como quieran. El calendario y el sistema de competencia se arman al cerrar el registro, con los equipos que hayan quedado.</p>
   <span class="rapido">🏀 Registrar un equipo toma tres minutos</span>
 </header>
 
@@ -173,7 +173,7 @@ footer a { color:var(--vc); }
 
   <dl class="ficha">
     <div><dt>Cuándo</dt><dd>Martes y jueves<small>11:00 a 11:30 h</small></dd></div>
-    <div><dt>Equipos</dt><dd>Siete personas<small>5 hombres y 2 mujeres</small></dd></div>
+    <div><dt>Equipos</dt><dd>Siete personas<small>4 hombres y 3 mujeres</small></dd></div>
     <div><dt>En cancha</dt><dd>Cinco por lado<small>Dos personas de relevo</small></dd></div>
     <div><dt>Quién puede</dt><dd>Toda la comunidad<small>Estudiantes, docentes y administrativos</small></dd></div>
   </dl>
@@ -186,7 +186,7 @@ footer a { color:var(--vc); }
       <button class="puerta" onclick="entrar('equipo')">
         <span class="puerta-emoji">🏀</span>
         <span class="puerta-titulo">Inscribir un equipo</span>
-        <span class="puerta-desc">Siete personas: cinco hombres y dos mujeres, cinco en cancha y dos de relevo. Tres pasos.</span>
+        <span class="puerta-desc">Siete personas: cuatro hombres y tres mujeres, cinco en cancha y dos de relevo. Tres pasos.</span>
         <span class="puerta-cta">Registrar equipo →</span>
       </button>
       <button class="puerta silbato" onclick="entrar('arbitro')">
@@ -247,27 +247,27 @@ footer a { color:var(--vc); }
     <!-- PASO 2 -->
     <section class="paso" id="paso-2" hidden>
       <h2>La plantilla</h2>
-      <p class="intro">Siete personas: cinco hombres y dos mujeres. Cinco juegan a la vez y las dos que quedan fuera entran en los cambios, de manera que siempre haya relevos. Anota a todas, incluida quien capitanea.</p>
+      <p class="intro">Siete personas: cuatro hombres y tres mujeres. Cinco juegan a la vez —siempre con al menos dos mujeres en cancha— y las dos que quedan fuera entran en los cambios, de manera que siempre haya relevos. Anota a todas, incluida quien capitanea.</p>
 
       <div class="bloque">
         <div class="bloque-titulo">
           <h3>Hombres</h3>
-          <span class="pastilla">Cinco</span>
+          <span class="pastilla">Cuatro</span>
         </div>
         <div class="jugador"><span class="num">1</span><input type="text" id="h1" placeholder="Nombre y apellidos"><select id="ha1" class="adsc"></select></div>
         <div class="jugador"><span class="num">2</span><input type="text" id="h2" placeholder="Nombre y apellidos"><select id="ha2" class="adsc"></select></div>
         <div class="jugador"><span class="num">3</span><input type="text" id="h3" placeholder="Nombre y apellidos"><select id="ha3" class="adsc"></select></div>
         <div class="jugador"><span class="num">4</span><input type="text" id="h4" placeholder="Nombre y apellidos"><select id="ha4" class="adsc"></select></div>
-        <div class="jugador"><span class="num">5</span><input type="text" id="h5" placeholder="Nombre y apellidos"><select id="ha5" class="adsc"></select></div>
       </div>
 
       <div class="bloque">
         <div class="bloque-titulo">
           <h3>Mujeres</h3>
-          <span class="pastilla f">Dos</span>
+          <span class="pastilla f">Tres</span>
         </div>
-        <div class="jugador"><span class="num">6</span><input type="text" id="f1" placeholder="Nombre y apellidos"><select id="fa1" class="adsc"></select></div>
-        <div class="jugador"><span class="num">7</span><input type="text" id="f2" placeholder="Nombre y apellidos"><select id="fa2" class="adsc"></select></div>
+        <div class="jugador"><span class="num">5</span><input type="text" id="f1" placeholder="Nombre y apellidos"><select id="fa1" class="adsc"></select></div>
+        <div class="jugador"><span class="num">6</span><input type="text" id="f2" placeholder="Nombre y apellidos"><select id="fa2" class="adsc"></select></div>
+        <div class="jugador"><span class="num">7</span><input type="text" id="f3" placeholder="Nombre y apellidos"><select id="fa3" class="adsc"></select></div>
       </div>
 
       <p class="mezcla" id="mezcla">La mezcla del equipo aparece aquí conforme se llena.</p>
@@ -295,7 +295,7 @@ footer a { color:var(--vc); }
       <label class="opcion" style="margin-bottom:16px;">
         <input type="checkbox" id="compromiso">
         <span>Aceptamos las condiciones del torneo.
-          <small>Nos presentamos a las 11:00 en punto, jugamos cinco por lado con las dos mujeres del equipo siempre en cancha, avisamos con anticipación cuando no podamos jugar, acatamos las decisiones del arbitraje, jugamos con respeto dentro y fuera de la cancha, y dejamos limpio el espacio al terminar.</small>
+          <small>Nos presentamos a las 11:00 en punto, jugamos cinco por lado con al menos dos mujeres siempre en cancha, avisamos con anticipación cuando no podamos jugar, acatamos las decisiones del arbitraje, jugamos con respeto dentro y fuera de la cancha, y dejamos limpio el espacio al terminar.</small>
         </span>
       </label>
 
@@ -390,8 +390,8 @@ document.querySelectorAll('select.adsc').forEach(function (s) {
   s.innerHTML = html;
 });
 
-var IDS_H = ['h1','h2','h3','h4','h5'], IDS_HA = ['ha1','ha2','ha3','ha4','ha5'];
-var IDS_F = ['f1','f2'], IDS_FA = ['fa1','fa2'];
+var IDS_H = ['h1','h2','h3','h4'], IDS_HA = ['ha1','ha2','ha3','ha4'];
+var IDS_F = ['f1','f2','f3'], IDS_FA = ['fa1','fa2','fa3'];
 var nombres = ['El equipo','La plantilla','Disponibilidad y compromiso'];
 var modo = '';
 

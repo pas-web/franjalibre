@@ -1,7 +1,7 @@
 /**
  * TORNEO DE BÁSQUETBOL MIXTO · FRANJA LIBRE · CAMPUS CONCÁ UAQ
  * Recibe los registros de basquetbol.html y los guarda en la hoja de cálculo.
- * Atiende dos tipos de envío: equipos (cinco hombres y dos mujeres) y árbitros.
+ * Atiende dos tipos de envío: equipos (cuatro hombres y tres mujeres) y árbitros.
  *
  * CÓMO INSTALARLO
  *  1. Abre la hoja de cálculo del torneo en Drive.
